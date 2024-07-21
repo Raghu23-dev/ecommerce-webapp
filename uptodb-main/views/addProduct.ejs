@@ -1,0 +1,81 @@
+<!-- views/add-product.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Add Product</title>
+</head>
+<body>
+    <header>
+        <h1 style="display: inline-block;">Products</h1>
+        <a href="/products" class="home-product-btn">
+          <img src="https://img.icons8.com/?size=50&id=VjPllgXNCXLU&format=png&color=000000" alt="">
+        </a>
+      </header>
+      <h1 class="form_title">Add Product</h1>
+      <div class="form-container">
+        <form id="addProductForm" action="/products/add" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" required>
+          </div>
+          <div class="form-group">
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required>
+          </div>
+          <div class="form-group">
+            <label for="imageUrl">Image URL:</label>
+            <input type="text" id="imageUrl" name="imageUrl" placeholder="Paste image URL here" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+          </div>
+          <button type="submit" class="submit-btn">Add Product</button>
+        </form>
+      </div>
+    <!-- <header>
+        <h1>Add Product</h1>
+        <a href="/products" class="home-btn">
+            <img src="/images/home-icon.png" alt="Home">
+        </a>
+        <a href="/products/add" class="add-product-btn">Add Product</a>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Add a New Product</h2>
+            <form action="/products/add" method="post">
+                <div class="form-group">
+                    <label for="name">Product Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <input type="text" id="category" name="category" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="imageUrl">Image URL:</label>
+                    <input type="text" id="imageUrl" name="imageUrl" required>
+                </div>
+                <button type="submit" class="submit-btn">Add Product</button>
+                <a href="/login" class="btn btn-login">Login</a>
+                <a href="/signup" class="btn btn-signup">Signup</a>
+            </form>
+        </div>
+    </main>  -->
+</body>
+</html> 
