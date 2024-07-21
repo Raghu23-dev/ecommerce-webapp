@@ -1,0 +1,57 @@
+<!-- views/edit-product.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Edit Product</title>
+</head>
+<body>
+    <header>
+        <!-- <h1>Edit Product</h1>
+        <a href="/products" class="home-btn">
+            <img src="/images/home-icon.png" alt="Home">
+        </a>
+        <a href="/products/add" class="add-product-btn">Add Product</a> -->
+        <h1 style="display: inline-block;"> Edit Products</h1>
+    <a href="/products" class="home-product-btn">
+      <img src="https://img.icons8.com/?size=50&id=VjPllgXNCXLU&format=png&color=000000" alt="">
+    </a>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Edit Product</h2>
+            <form action="/products/edit/<%= product._id %>" method="post">
+                <div class="form-group">
+                    <label for="name">Product Name:</label>
+                    <input type="text" id="name" name="name" value="<%= product.name %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" step="0.01" value="<%= product.price %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <input type="text" id="category" name="category" value="<%= product.category %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" required><%= product.description %></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="imageUrl">Image URL:</label>
+                    <input type="text" id="imageUrl" name="imageUrl" value="<%= product.imageUrl %>" required>
+                </div>
+                <div class="form-group">
+                    <label>Current Image:</label>
+                    <img src="<%= product.imageUrl %>" alt="Product Image" style="width: 100%; height: auto; border-radius: 4px;">
+                </div>
+                <button type="submit" class="submit-btn">Update Product</button>
+                <a href="/login" class="btn btn-login">Login</a>
+                <a href="/signup" class="btn btn-signup">Signup</a>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
